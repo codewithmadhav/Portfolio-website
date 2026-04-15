@@ -1,0 +1,486 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- HERO SECTION -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <div class="hero-badge">Welcome to my portfolio</div>
+        <h1 class="hero-title">Creative Developer & Designer</h1>
+        <p class="hero-subtitle">Crafting beautiful digital experiences with code and creativity</p>
+        <div class="hero-buttons">
+            <button class="btn btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">
+                View My Work
+            </button>
+            <button class="btn btn-secondary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                Get In Touch
+            </button>
+        </div>
+        <div class="hero-social">
+            <a href="#" class="social-icon">GitHub</a>
+            <a href="#" class="social-icon">LinkedIn</a>
+            <a href="#" class="social-icon">Twitter</a>
+        </div>
+    </div>
+    <div class="hero-background"></div>
+    <div class="hero-accent"></div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="about">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-wrapper">
+            <div class="about-text">
+                <p class="about-intro">
+                    Hello! I'm a passionate full-stack web developer with a keen eye for design. 
+                    I specialize in creating beautiful, functional, and user-friendly websites that help 
+                    businesses grow and succeed in the digital world.
+                </p>
+                <p class="about-description">
+                    With 3+ years of experience in web development, I've worked with startups and established 
+                    companies to build digital solutions that make an impact. My focus is on combining clean code 
+                    with stunning design to create experiences that users love.
+                </p>
+                <div class="about-highlights stagger">
+                    <div class="highlight-item">
+                        <span class="highlight-number">20</span>
+                        <span class="highlight-text">Projects Completed</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-number">15</span>
+                        <span class="highlight-text">Happy Clients</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-number">3</span>
+                        <span class="highlight-text">Years Experience</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <div class="about-image-placeholder hover-scale">
+                    <div class="image-icon">👤</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- SKILLS SECTION -->
+<section id="skills" class="skills">
+    <div class="container">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-wrapper">
+            <div class="skill-category">
+                <h3 class="category-title">Frontend</h3>
+                <div class="skills-grid">
+                    <div class="skill-card hover-lift">
+                        <div class="skill-icon">🎨</div>
+                        <h4 class="skill-name">HTML & CSS</h4>
+                        <p class="skill-level">Expert</p>
+                    </div>
+                    <div class="skill-card hover-lift">
+                        <div class="skill-icon">✨</div>
+                        <h4 class="skill-name">JavaScript</h4>
+                        <p class="skill-level">Advanced</p>
+                    </div>
+                    <div class="skill-card hover-lift">
+                        <div class="skill-icon">⚛️</div>
+                        <h4 class="skill-name">React</h4>
+                        <p class="skill-level">Intermediate</p>
+                    </div>
+                    <div class="skill-card hover-lift">
+                        <div class="skill-icon">📱</div>
+                        <h4 class="skill-name">Responsive Design</h4>
+                        <p class="skill-level">Expert</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3 class="category-title">Backend</h3>
+                <div class="skills-grid">
+                    <div class="skill-card hover-lift">
+                        <div class="skill-icon">🐍</div>
+                        <h4 class="skill-name">Python & Django</h4>
+                        <p class="skill-level">Advanced</p>
+                    </div>
+                    <div class="skill-card hover-lift">
+                        <div class="skill-icon">🗄️</div>
+                        <h4 class="skill-name">Databases</h4>
+                        <p class="skill-level">Intermediate</p>
+                    </div>
+                    <div class="skill-card hover-lift">
+                        <div class="skill-icon">🔐</div>
+                        <h4 class="skill-name">Authentication</h4>
+                        <p class="skill-level">Intermediate</p>
+                    </div>
+                    <div class="skill-card hover-lift">
+                        <div class="skill-icon">⚙️</div>
+                        <h4 class="skill-name">REST APIs</h4>
+                        <p class="skill-level">Advanced</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3 class="category-title">Tools & Others</h3>
+                <div class="skills-grid">
+                    <div class="skill-card hover-lift">
+                        <div class="skill-icon">🎬</div>
+                        <h4 class="skill-name">UI/UX Design</h4>
+                        <p class="skill-level">Advanced</p>
+                    </div>
+                    <div class="skill-card hover-lift">
+                        <div class="skill-icon">📦</div>
+                        <h4 class="skill-name">Git & GitHub</h4>
+                        <p class="skill-level">Advanced</p>
+                    </div>
+                    <div class="skill-card hover-lift">
+                        <div class="skill-icon">🚀</div>
+                        <h4 class="skill-name">Deployment</h4>
+                        <p class="skill-level">Intermediate</p>
+                    </div>
+                    <div class="skill-card hover-lift">
+                        <div class="skill-icon">🎯</div>
+                        <h4 class="skill-name">Problem Solving</h4>
+                        <p class="skill-level">Expert</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<section id="services" class="services">
+    <div class="container">
+        <h2 class="section-title">What I Offer</h2>
+        <div class="services-grid">
+            <div class="service-card hover-lift hover-glow">
+                <div class="service-icon">🌐</div>
+                <h3 class="service-title">Web Development</h3>
+                <p class="service-description">
+                    Building responsive, fast, and modern websites using the latest technologies and best practices.
+                </p>
+                <ul class="service-features">
+                    <li>✓ Custom Websites</li>
+                    <li>✓ Web Applications</li>
+                    <li>✓ E-Commerce Sites</li>
+                </ul>
+            </div>
+
+            <div class="service-card hover-lift hover-glow">
+                <div class="service-icon">🎨</div>
+                <h3 class="service-title">UI/UX Design</h3>
+                <p class="service-description">
+                    Creating beautiful and intuitive user interfaces that provide great user experiences.
+                </p>
+                <ul class="service-features">
+                    <li>✓ Wireframing</li>
+                    <li>✓ Prototyping</li>
+                    <li>✓ Visual Design</li>
+                </ul>
+            </div>
+
+            <div class="service-card hover-lift hover-glow">
+                <div class="service-icon">⚡</div>
+                <h3 class="service-title">Performance & SEO</h3>
+                <p class="service-description">
+                    Optimizing websites for speed, accessibility, and search engine rankings.
+                </p>
+                <ul class="service-features">
+                    <li>✓ Speed Optimization</li>
+                    <li>✓ SEO Setup</li>
+                    <li>✓ Accessibility</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS SECTION -->
+<section id="projects" class="projects">
+    <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card  hover-glow">
+                <div class="project-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <span class="project-category">Web App</span>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">E-Commerce Platform</h3>
+                    <p class="project-description">
+                        A full-featured e-commerce platform built with Django and React, featuring product management, shopping cart, and payment integration.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Django</span>
+                        <span class="tag">React</span>
+                        <span class="tag">PostgreSQL</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+            </div>
+
+            <div class="project-card hover-glow">
+                <div class="project-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <span class="project-category">Website</span>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Creative Agency Portfolio</h3>
+                    <p class="project-description">
+                        Modern portfolio website for a creative agency with smooth animations, interactive elements, and responsive design.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+            </div>
+
+            <div class="project-card hover-glow">
+                <div class="project-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                    <span class="project-category">Web App</span>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Task Management App</h3>
+                    <p class="project-description">
+                        A collaborative task management application with real-time updates, team workspaces, and deadline tracking.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Django</span>
+                        <span class="tag">WebSocket</span>
+                        <span class="tag">SQLite</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+            </div>
+
+            <div class="project-card hover-glow">
+                <div class="project-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                    <span class="project-category">Website</span>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">SaaS Landing Page</h3>
+                    <p class="project-description">
+                        High-converting landing page for a SaaS product with integrated analytics, testimonials section, and CTA optimization.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">Analytics</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+            </div>
+
+            <div class="project-card hover-glow">
+                <div class="project-image" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);">
+                    <span class="project-category">Web App</span>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Weather Dashboard</h3>
+                    <p class="project-description">
+                        Real-time weather application with location services, detailed forecasts, and beautiful data visualizations.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">API</span>
+                        <span class="tag">Charts</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+            </div>
+
+            <div class="project-card hover-glow">
+                <div class="project-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                    <span class="project-category">Website</span>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Blog Platform</h3>
+                    <p class="project-description">
+                        Feature-rich blogging platform with markdown support, comments, categories, and SEO optimization.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Django</span>
+                        <span class="tag">Markdown</span>
+                        <span class="tag">PostgreSQL</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="contact-intro">Have a project in mind? Let's talk! I'm always interested in hearing about new projects.</p>
+        
+        <!-- Display success/error messages -->
+        {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+            <div class="message message-{{ message.tags }}">
+                <p>{{ message }}</p>
+                <button class="message-close" onclick="this.parentElement.style.display='none';">&times;</button>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h4 class="contact-label">📧 Email</h4>
+                    <a href="mailto:your.email@example.com">your.email@example.com</a>
+                </div>
+                <div class="contact-item">
+                    <h4 class="contact-label">📱 Phone</h4>
+                    <a href="tel:+1234567890">+1 (234) 567-890</a>
+                </div>
+                <div class="contact-item">
+                    <h4 class="contact-label">📍 Location</h4>
+                    <p>San Francisco, CA, USA</p>
+                </div>
+                <div class="contact-item">
+                    <h4 class="contact-label">🔗 Social</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">GitHub</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Twitter</a>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form" method="POST">
+                {% csrf_token %}
+                
+                <!-- Name Field -->
+                <div class="form-group">
+                    {{ form.name }}
+                    {% if form.name.errors %}
+                    <span class="form-error">{{ form.name.errors.0 }}</span>
+                    {% endif %}
+                </div>
+                
+                <!-- Email Field -->
+                <div class="form-group">
+                    {{ form.email }}
+                    {% if form.email.errors %}
+                    <span class="form-error">{{ form.email.errors.0 }}</span>
+                    {% endif %}
+                </div>
+                
+                <!-- Subject Field -->
+                <div class="form-group">
+                    {{ form.subject }}
+                    {% if form.subject.errors %}
+                    <span class="form-error">{{ form.subject.errors.0 }}</span>
+                    {% endif %}
+                </div>
+                
+                <!-- Message Field -->
+                <div class="form-group">
+                    {{ form.message }}
+                    {% if form.message.errors %}
+                    <span class="form-error">{{ form.message.errors.0 }}</span>
+                    {% endif %}
+                </div>
+                
+                <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- RESUME SECTION (Optional - can be added later) -->
+<section id="resume" class="resume">
+    <div class="container">
+        <h2 class="section-title">Resume & Experience</h2>
+        <div class="resume-content">
+            <div class="experience-section">
+                <h3 class="resume-category">💼 Work Experience</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022 - Present</div>
+                        <div class="timeline-content">
+                            <h4 class="timeline-title">Senior Web Developer</h4>
+                            <p class="timeline-company">Tech Startup Inc.</p>
+                            <p class="timeline-description">Led development of multiple web applications, mentored junior developers, and improved application performance by 40%.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2020 - 2022</div>
+                        <div class="timeline-content">
+                            <h4 class="timeline-title">Full Stack Developer</h4>
+                            <p class="timeline-company">Digital Agency Co.</p>
+                            <p class="timeline-description">Built 15+ client websites, managed client relationships, and implemented custom features based on requirements.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2019 - 2020</div>
+                        <div class="timeline-content">
+                            <h4 class="timeline-title">Junior Developer</h4>
+                            <p class="timeline-company">Web Solutions LLC</p>
+                            <p class="timeline-description">Started career building websites, learned modern frameworks, and contributed to team projects.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-section">
+                <h3 class="resume-category">🎓 Education</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2017 - 2019</div>
+                        <div class="timeline-content">
+                            <h4 class="timeline-title">Bachelor of Computer Science</h4>
+                            <p class="timeline-company">University Name</p>
+                            <p class="timeline-description">Graduated with honors. Focused on web development and software engineering principles.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4 class="footer-title">Portfolio</h4>
+                <p class="footer-text">Creating beautiful digital experiences since 2019.</p>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Follow Me</h4>
+                <div class="footer-social">
+                    <a href="#" class="footer-social-link">GitHub</a>
+                    <a href="#" class="footer-social-link">LinkedIn</a>
+                    <a href="#" class="footer-social-link">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+{% endblock %}

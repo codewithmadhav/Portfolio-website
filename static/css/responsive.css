@@ -1,0 +1,342 @@
+/* ============================================
+   TABLET (768px and below)
+   ============================================ */
+
+@media (max-width: 768px) {
+    /* Typography */
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    /* Navbar */
+    .nav-links {
+        gap: var(--spacing-md);
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+
+    /* Hero */
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* About */
+    .about-wrapper {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .about-image {
+        order: -1;
+    }
+
+    .about-highlights {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact */
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    /* Resume */
+    .resume-content {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    /* Spacing */
+    section {
+        padding: var(--spacing-lg) 0;
+    }
+
+    .hero {
+        padding-top: 60px;
+    }
+
+    .hero-background {
+        width: 350px;
+        height: 350px;
+    }
+
+    .hero-accent {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* ============================================
+   MOBILE (480px and below)
+   ============================================ */
+
+@media (max-width: 480px) {
+    /* Typography */
+    .hero-title {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section-title::after {
+        width: 40px;
+    }
+
+    /* Navbar */
+    .navbar-content {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .nav-links {
+        gap: var(--spacing-sm);
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        font-size: 0.75rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding-top: 50px;
+        min-height: 80vh;
+    }
+
+    .hero-badge {
+        font-size: 0.7rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.85rem;
+        width: 100%;
+    }
+
+    .hero-social {
+        gap: var(--spacing-sm);
+        flex-direction: column;
+    }
+
+    .social-icon {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+    }
+
+    .hero-background {
+        width: 250px;
+        height: 250px;
+        right: -50px;
+    }
+
+    .hero-accent {
+        width: 150px;
+        height: 150px;
+        left: -50px;
+    }
+
+    /* About */
+    .about-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image-placeholder {
+        width: 200px;
+        height: 200px;
+        font-size: 4rem;
+    }
+
+    .about-highlights {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+
+    .highlight-item {
+        padding: var(--spacing-md);
+    }
+
+    /* Skills */
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
+    }
+
+    .skill-card {
+        padding: var(--spacing-md);
+    }
+
+    .skill-icon {
+        font-size: 2rem;
+    }
+
+    /* Services */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-icon {
+        font-size: 2rem;
+    }
+
+    /* Projects */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        height: 150px;
+    }
+
+    .project-content {
+        padding: var(--spacing-md);
+    }
+
+    /* Contact */
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        gap: var(--spacing-md);
+    }
+
+    .contact-form {
+        padding: var(--spacing-md);
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    /* Spacing */
+    .container {
+        padding: 0 1rem;
+    }
+
+    section {
+        padding: var(--spacing-lg) 0;
+    }
+
+    .hero {
+        padding-top: 60px;
+    }
+}
+
+/* ============================================
+   SMALL DEVICES (under 360px)
+   ============================================ */
+
+@media (max-width: 360px) {
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.25rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .highlight-item {
+        padding: var(--spacing-sm);
+    }
+
+    .about-image-placeholder {
+        width: 150px;
+        height: 150px;
+        font-size: 3rem;
+    }
+}
+
+
+/* Mobile Menu Toggle Button */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+        background: transparent;
+        border: none;
+        color: var(--accent-color);
+        font-size: 1.5rem;
+        cursor: pointer;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .menu-toggle span {
+        width: 25px;
+        height: 2px;
+        background: var(--accent-color);
+        transition: var(--transition-smooth);
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(10px, 10px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+}

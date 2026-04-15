@@ -1,0 +1,402 @@
+/* ============================================
+   KEYFRAME ANIMATIONS
+   ============================================ */
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* ============================================
+   ANIMATION CLASSES
+   ============================================ */
+
+.fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.slide-up {
+    animation: slideUp 0.6s ease-in-out;
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.6s ease-in-out;
+}
+
+.slide-in-right {
+    animation: slideInRight 0.6s ease-in-out;
+}
+
+.scale-in {
+    animation: scaleIn 0.6s ease-in-out;
+}
+
+.pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* ============================================
+   STAGGERED ANIMATIONS
+   ============================================ */
+
+.stagger > * {
+    opacity: 0;
+    animation: slideUp 0.6s ease-in-out forwards;
+}
+
+.stagger > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger > *:nth-child(5) { animation-delay: 0.5s; }
+.stagger > *:nth-child(6) { animation-delay: 0.6s; }
+
+/* ============================================
+   SCROLL REVEAL ANIMATIONS
+   ============================================ */
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.scroll-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================================
+   HOVER EFFECTS
+   ============================================ */
+
+.hover-lift {
+    transition: var(--transition-smooth);
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+}
+
+.hover-glow {
+    transition: var(--transition-smooth);
+}
+
+.hover-glow:hover {
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+}
+
+.hover-scale {
+    transition: var(--transition-smooth);
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+/* ============================================
+   TEXT ANIMATIONS
+   ============================================ */
+
+.text-gradient {
+    background: linear-gradient(135deg, #00d4ff, #00a8cc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* ============================================
+   CUSTOM CURSOR
+   ============================================ */
+
+body {
+    cursor: none;
+}
+
+.cursor-dot {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cursor-circle {
+    position: fixed;
+    width: 32px;
+    height: 32px;
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cursor-dot.hover,
+.cursor-circle.hover {
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+.cursor-circle.hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+}
+
+/* Hide default cursor on touch devices */
+@media (hover: none) {
+    body {
+        cursor: auto;
+    }
+
+    .cursor-dot,
+    .cursor-circle {
+        display: none;
+    }
+}
+
+/* ============================================
+   SKILL PROGRESS BARS
+   ============================================ */
+
+.skill-progress {
+    width: 100%;
+    height: 4px;
+    background: rgba(0, 212, 255, 0.1);
+    border-radius: 2px;
+    margin-top: 0.75rem;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-color), #00a8cc);
+    border-radius: 2px;
+    width: 0;
+    transition: width 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ============================================
+   RIPPLE EFFECT FOR BUTTONS
+   ============================================ */
+
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(0);
+    animation: ripple-animation 0.6s ease-out;
+    pointer-events: none;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* ============================================
+   SMOOTH TRANSITIONS
+   ============================================ */
+
+* {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button,
+a,
+.btn {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ============================================
+   ADDITIONAL SCROLL ANIMATIONS
+   ============================================ */
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 0.6s ease-in-out forwards;
+}
+
+.fade-in-down {
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: slideDown 0.6s ease-in-out forwards;
+}
+
+@keyframes slideDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   TEXT REVEAL ANIMATION
+   ============================================ */
+
+.text-reveal {
+    overflow: hidden;
+    position: relative;
+}
+
+.text-reveal::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--primary-color);
+    animation: textReveal 0.8s ease-in-out;
+}
+
+@keyframes textReveal {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+/* ============================================
+   GLOW EFFECTS
+   ============================================ */
+
+.glow {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3),
+                0 0 40px rgba(0, 212, 255, 0.2);
+}
+
+.glow-text {
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+}
+
+/* ============================================
+   BOUNCE ANIMATION
+   ============================================ */
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.bounce {
+    animation: bounce 0.6s ease-in-out;
+}
+
+/* ============================================
+   SPIN ANIMATION
+   ============================================ */
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spin {
+    animation: spin 2s linear infinite;
+}
